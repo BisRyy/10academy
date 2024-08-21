@@ -1,2 +1,3 @@
-print("10 Academy week 0 challenge starter code")
+def hello():
+    return "10 Academy week 0 challenge starter code"
 
