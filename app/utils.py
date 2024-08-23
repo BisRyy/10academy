@@ -36,6 +36,14 @@ def generate_line_plot(data, x, y, title):
     st.pyplot(fig)
 
 
+# Function to generate a box plot
+def generate_box_plot(data, column, title):
+    fig, ax = plt.subplots(figsize=(12, 6))
+    sns.boxplot(data=data, x=column, ax=ax)
+    ax.set_title(title)
+    st.pyplot(fig)
+
+
 # Function to generate a scatter plot
 def generate_scatter_plot(data, x, y, title, hue=None):
     fig, ax = plt.subplots(figsize=(12, 6))
