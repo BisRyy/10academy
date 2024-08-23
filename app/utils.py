@@ -26,6 +26,15 @@ def get_summary_stats(data):
     return data.describe()
 
 
+# Function to generate a histogram
+def generate_histogram(data, column, title):
+    fig, ax = plt.subplots(figsize=(12, 6))
+    sns.histplot(data[column], kde=True, ax=ax)
+    ax.set_title(title)
+    ax.set_xlabel("Value")
+    ax.set_ylabel("Count")
+    st.pyplot(fig)
+
 # Function to generate a line plot
 def generate_line_plot(data, x, y, title):
     fig, ax = plt.subplots(figsize=(12, 6))
