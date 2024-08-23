@@ -24,3 +24,13 @@ def clean_data(data):
 
 def get_summary_stats(data):
     return data.describe()
+
+
+# Function to generate a line plot
+def generate_line_plot(data, x, y, title):
+    fig, ax = plt.subplots(figsize=(12, 6))
+    sns.lineplot(data=data, x=x, y=y, ax=ax)
+    ax.set_title(title)
+    ax.set_xlabel(x)
+    ax.set_ylabel(y)
+    st.pyplot(fig)
