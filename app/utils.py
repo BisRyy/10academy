@@ -34,3 +34,13 @@ def generate_line_plot(data, x, y, title):
     ax.set_xlabel(x)
     ax.set_ylabel(y)
     st.pyplot(fig)
+
+
+# Function to generate a scatter plot
+def generate_scatter_plot(data, x, y, title, hue=None):
+    fig, ax = plt.subplots(figsize=(12, 6))
+    sns.scatterplot(data=data, x=x, y=y, hue=hue, ax=ax)
+    ax.set_title(title)
+    ax.set_xlabel(x)
+    ax.set_ylabel(y)
+    st.pyplot(fig)
